@@ -1,6 +1,6 @@
 # Common event contract v1
 
-Draft, being agreed with the group this week. It applies to every block that writes events into the shared system: image inspection, the aiot-stream-cv video block, sensors and workflows. It merges the image model output with the video block contract (`aiot-stream-cv/docs/data-contract.md`, Phạm Anh Quân, 2026-10-22). **Needs review by the whole group.**
+Draft,
 
 ## Fields
 
@@ -32,22 +32,4 @@ Draft, being agreed with the group this week. It applies to every block that wri
 
 `source_offline` / `source_recovered` follow the video block naming.
 
-## Mapping from the video block
 
-The bridge belongs to the workflow part. Every 2 s it calls `GET :8080/events?limit=50` on the video block, converts the events to this format and sends them to the shared system.
-
-| aiot-stream-cv | Common contract |
-|---|---|
-| `event_id`, `source_id`, `event_type`, `occurred_at` | unchanged |
-| `created_at` | `origin.created_at` |
-| `result` (object) | `details` |
-| (by type) | `result` = `alert` / `offline` / `online` / `ended` |
-| `evidence_path`, `evidence_clip` | `evidence.image_url`, `evidence.clip_url` (prefixed with `http://<cv-host>:8080/`) |
-
-When the video block does not respond, the bridge sends **one** `source_offline` with `source_id=cv_api`, and a `source_recovered` when it is back.
-
-## Suggestions for the video block (to confirm with Quân)
-
-1. Add `frame_index` or the video timestamp to `result`, so accuracy on labelled video can be measured without manual time alignment.
-2. Use H.264 clips if the web needs to play them inline.
-3. Add `status` to each event; the bridge currently infers `status=error` for `source_offline`.
