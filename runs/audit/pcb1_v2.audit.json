@@ -1,0 +1,33 @@
+{
+  "n_rows": 1144,
+  "counts": {
+    "excluded": {
+      "normal": 1,
+      "anomaly": 0
+    },
+    "stress": {
+      "normal": 20,
+      "anomaly": 20
+    },
+    "test": {
+      "normal": 100,
+      "anomaly": 100
+    },
+    "train": {
+      "normal": 814,
+      "anomaly": 0
+    },
+    "val": {
+      "normal": 89,
+      "anomaly": 0
+    }
+  },
+  "n_errors": 0,
+  "n_warnings": 0,
+  "errors": [],
+  "warnings": [],
+  "near_dup_rule": "Pearson correlation of 64x64 grayscale >= 0.99; different split -> error, same split -> warning; review by eye",
+  "manifest": "data/manifests/pcb1_v2.csv",
+  "manifest_sha256": "b42c9535d51d6ab2411856746a4aea465bbf93376a96a906dcb8c7b26dcb0cc1",
+  "created_at": "2026-10-27T05:32:11+00:00"
+}

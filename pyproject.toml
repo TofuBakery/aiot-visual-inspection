@@ -1,0 +1,8 @@
+[project]
+name = "aiot-visual-inspection"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "Pillow>=10.0"]
+
+[tool.pytest.ini_options]
+pythonpath = [".", "tests"]
