@@ -1,0 +1,46 @@
+{
+  "counts": {
+    "test/anomaly/ref": 5,
+    "test/anomaly/rot180": 95,
+    "test/normal/ref": 68,
+    "test/normal/rot180": 32,
+    "train/normal/ref": 651,
+    "train/normal/rot180": 163,
+    "val/normal/ref": 70,
+    "val/normal/rot180": 19
+  },
+  "models": {
+    "template_z-pcb1-v2": {
+      "ref": {
+        "n_normal": 68,
+        "n_anomaly": 5,
+        "recall": 0.8,
+        "fpr": 0.058823529411764705,
+        "auroc": 0.9205882352941176
+      },
+      "rot180": {
+        "n_normal": 32,
+        "n_anomaly": 95,
+        "recall": 0.42105263157894735,
+        "fpr": 0.125,
+        "auroc": 0.680921052631579
+      }
+    },
+    "patch_knn-pcb1-v2": {
+      "ref": {
+        "n_normal": 68,
+        "n_anomaly": 5,
+        "recall": 1.0,
+        "fpr": 0.10294117647058823,
+        "auroc": 1.0
+      },
+      "rot180": {
+        "n_normal": 32,
+        "n_anomaly": 95,
+        "recall": 0.6842105263157895,
+        "fpr": 0.125,
+        "auroc": 0.8865131578947368
+      }
+    }
+  }
+}

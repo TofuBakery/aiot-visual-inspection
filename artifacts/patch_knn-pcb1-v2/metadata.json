@@ -1,0 +1,39 @@
+{
+  "model_version": "patch_knn-pcb1-v2",
+  "method": "patch_knn",
+  "category": "pcb1",
+  "params": {
+    "size": 96,
+    "grid": 8,
+    "patch": 12,
+    "top_k": 3,
+    "align": false,
+    "n_features": 10,
+    "memory_patches": 52096
+  },
+  "origin": [
+    "VisA_20220922 (CC BY 4.0)"
+  ],
+  "threshold": 0.5053532123565674,
+  "threshold_rule": "percentile 95 of validation normal scores, method=higher; anomaly if score > threshold",
+  "n_train_normal": 814,
+  "n_val_normal": 89,
+  "val_score_stats": {
+    "min": 0.28471052646636963,
+    "median": 0.37535110116004944,
+    "max": 0.6194868087768555
+  },
+  "manifest": "data/manifests/pcb1_v2.csv",
+  "manifest_sha256": "b42c9535d51d6ab2411856746a4aea465bbf93376a96a906dcb8c7b26dcb0cc1",
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "processor": "x86_64",
+    "numpy": "2.5.3",
+    "pillow": "12.3.0"
+  },
+  "created_at": "2026-10-21T08:55:32+00:00",
+  "aiot_version": "0.1.0",
+  "note": "anomaly_score is not a probability; scales differ between methods"
+}

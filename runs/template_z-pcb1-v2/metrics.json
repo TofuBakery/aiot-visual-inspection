@@ -1,0 +1,61 @@
+{
+  "model_version": "template_z-pcb1-v2",
+  "method": "template_z",
+  "category": "pcb1",
+  "manifest_sha256": "b42c9535d51d6ab2411856746a4aea465bbf93376a96a906dcb8c7b26dcb0cc1",
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "processor": "x86_64",
+    "numpy": "2.5.3",
+    "pillow": "12.3.0"
+  },
+  "created_at": "2026-10-21T08:56:04+00:00",
+  "sets": {
+    "test": {
+      "n_normal": 100,
+      "n_anomaly": 100,
+      "TP": 44,
+      "FP": 8,
+      "FN": 56,
+      "TN": 92,
+      "precision": 0.8461538461538461,
+      "recall": 0.44,
+      "f1": 0.5789473684210525,
+      "fpr": 0.08,
+      "auroc": 0.8319,
+      "ap": 0.8024270621249061,
+      "threshold": 4.033390522003174,
+      "latency": {
+        "runs_per_image": 3,
+        "n_images": 50,
+        "p50_ms": 38.977722000026915,
+        "p95_ms": 63.87977590003969,
+        "mean_ms": 41.81217790000346
+      }
+    },
+    "stress": {
+      "n_normal": 20,
+      "n_anomaly": 20,
+      "TP": 20,
+      "FP": 20,
+      "FN": 0,
+      "TN": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "fpr": 1.0,
+      "auroc": 0.735,
+      "ap": 0.8048218540824376,
+      "threshold": 4.033390522003174,
+      "latency": {
+        "runs_per_image": 3,
+        "n_images": 40,
+        "p50_ms": 111.84231049998061,
+        "p95_ms": 184.8868326500394,
+        "mean_ms": 117.11644220000039
+      }
+    }
+  }
+}
